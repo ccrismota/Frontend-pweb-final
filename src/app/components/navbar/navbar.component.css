@@ -8,6 +8,10 @@
   height: 105px;
 }
 
+.navbar-conteudo .muted{
+ font-size: small;
+}
+
 .logo {
   object-fit: cover;
   cursor: pointer;
@@ -35,7 +39,7 @@
 
 .icone-login-cart ul li{
   padding: 0 0 0 30px;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .bi-search{
@@ -80,7 +84,7 @@
   }
 
   .bi-cart, .bi-person-circle {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0;
     padding: 0 7px 0 0;
   }
