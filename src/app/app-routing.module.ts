@@ -10,6 +10,7 @@ import { MaisVendidosComponent } from './components/mais-vendidos/mais-vendidos.
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { PedidosEspeciaisComponent } from './components/pedidos-especiais/pedidos-especiais.component';
 import { RecuperarSenhaComponent } from './components/recuperar-senha/recuperar-senha.component';
+import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-produto.component';
 
 const routes: Routes = [
   { path: '', component: PaginaPrincipalComponent ,
@@ -22,7 +23,8 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'carrinho', component: CarrinhoComponent},
     {path: 'cadastrar', component: CadastroComponent},
-    {path: 'recuperarsenha' ,component: RecuperarSenhaComponent}
+    {path: 'recuperarsenha' ,component: RecuperarSenhaComponent},
+    {path: 'detalhes/:id', component: DetalheProdutoComponent},
 ]},
 
 ];

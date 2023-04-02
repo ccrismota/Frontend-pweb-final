@@ -16,95 +16,107 @@
   <h6 class="mt-5 mb-3">Destaques</h6>
   <!-- card inicio -->
   <div class="row">
-    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_1.png" class="card-img-top" alt="marmita">
-        <div class="card-body">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 20,90</span>
-          <span class="peso">250g</span>
+    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 button-show">
+      <a href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_1.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 15,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-        <button class="button-card" type="button">
-          <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-        </button>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
-    <div class="col-sm-4 mb-3 mb-sm-0  col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_2.png" class="card-img-top" alt="marmita">
-        <div class="card-body">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 15,90</span>
-          <span class="peso">250g</span>
+    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 button-show">
+      <a  href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_2.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 15,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-        <button class="button-card" type="button">
-          <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-        </button>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
-    <div class="col-sm-4 mb-3 mb-sm-0  col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_3.png" class="card-img-top" alt="marmita">
-        <div class="card-body">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 23,90</span>
-          <span class="peso">250g</span>
-          <button class="button-card" type="button">
-            <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-          </button>
+    <div class="col-sm-4 mb-3 mb-sm-0  col-md-6 col-lg-4 button-show">
+      <a  href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_3.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 23,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
-    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 space-card">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_3.png" class="card-img-top" alt="marmita">
-        <div class="card-body">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 20,90</span>
-          <span class="peso">250g</span>
-          <button class="button-card" type="button">
-            <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-          </button>
+    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 button-show">
+      <a  href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_3.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 20,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
-    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 space-card">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_1.png" class="card-img-top" alt="marmita">
-        <div class="card-body ">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 15,90</span>
-          <span class="peso">250g</span>
-          <button class="button-card" type="button">
-            <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-          </button>
+    <div class="col-sm-4 mb-3 mb-sm-0 col-md-6 col-lg-4 button-show">
+      <a  href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_1.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2 text-justify">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 15,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
-    <div class="col-sm-4 mb-sm-0 col-md-6 col-lg-4 mb-3 space-card">
-      <div class="card mb-3">
-        <img src="assets/img/marmita_2.png" class="card-img-top" alt="marmita">
-        <div class="card-body">
-          <span class="card-title">Novo</span>
-          <span class="card-title card-2">Contém Nozes</span>
-          <p class="card-text mt-2 mb-2">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
-          <span class="preco">R$ 19,90</span>
-          <span class="peso">250g</span>
-          <button class="button-card" type="button">
-            <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
-          </button>
+    <div class="col-sm-4 mb-sm-0 col-md-6 col-lg-4 mb-3 button-show">
+      <a  href="detalhe/:id">
+        <div class="card mb-5">
+          <img src="assets/img/marmita_2.png" class="card-img-top" alt="marmita">
+          <div class="card-body">
+            <span class="card-title">Novo</span>
+            <span class="card-title card-2">Contém Nozes</span>
+            <p class="card-text mt-2 mb-2">Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.</p>
+            <span class="preco">R$ 19,90</span>
+            <span class="peso">250g</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <button class="button-card" type="button">
+        <a [routerLink]="['carrinho']">Adicionar ao carrinho</a>
+      </button>
     </div>
   </div>
 

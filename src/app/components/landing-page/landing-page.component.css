@@ -39,7 +39,6 @@ img {
 }
 
 .button-card {
-  height: 60px;
   width: 100%;
   background-color: #000000;
   border-radius: 0 0 7px 7px;
@@ -47,13 +46,17 @@ img {
   font-weight: 600;
   color: #FDCE0C;
   padding: 10px 10px 10px 25px;
-  margin:0;
+  margin:-50px 0 25px 0;
   display: none;
 }
 
-.card:hover .button-card{
+.button-show:hover .button-card{
   display: block;
   border: 1px solid#000;
+}
+
+.card:hover{
+  border-radius: 7px 7px 0  0;
 }
 
 .button-card a {
@@ -61,28 +64,42 @@ img {
   text-decoration: none;
 }
 
+.button-show a{
+  text-decoration: none;
+}
+
 .card-text{
   text-align: justify;
 }
 
-.space-card{
-  padding-bottom: 60px;
+.card {
+ height: 467px;
 }
 
-@media (max-width: 990px) {
+.card-body {
+  margin-bottom: 5px;
+}
+
+.space-card{
+  margin-bottom: 150px;
+  border: 1px solid red;
+}
+
+@media (max-width: 992px) {
   .card-body .peso {
     margin-left: 150px;
     font-size: medium;
   }
+
+  .button-card{
+    display: block;
+  }
+
+  .card {
+    border-radius: 7px 7px 0  0;
+  }
 }
 
-@media (min-width: 992px) {
-  /* .card-body .peso {
-    margin-left: 150px;
-    font-size: medium;
-  } */
-  /* .example {background: orange;} */
-}
 
 
 
