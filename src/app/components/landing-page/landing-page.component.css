@@ -21,12 +21,14 @@ img {
 
 .card-text{
   font-weight: 300;
-  text-justify: inter-word;
 }
 
 .card-body .preco {
+  display: flex;
+  align-items: start;
   font-size: 25px;
   font-weight: 600;
+  float: left;
 }
 
 .card-body .peso {
@@ -49,7 +51,7 @@ img {
   display: none;
 }
 
-.card:hover .button-card {
+.card:hover .button-card{
   display: block;
   border: 1px solid#000;
 }
@@ -57,6 +59,14 @@ img {
 .button-card a {
   color: #FDCE0C;
   text-decoration: none;
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.space-card{
+  padding-bottom: 60px;
 }
 
 @media (max-width: 990px) {
@@ -67,7 +77,11 @@ img {
 }
 
 @media (min-width: 992px) {
-  .example {background: orange;}
+  /* .card-body .peso {
+    margin-left: 150px;
+    font-size: medium;
+  } */
+  /* .example {background: orange;} */
 }
 
 

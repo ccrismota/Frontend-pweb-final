@@ -20,6 +20,7 @@ const routes: Routes = [
     {path: 'pedidos-especiais', component: PedidosEspeciaisComponent},
     {path: 'login', component: LoginComponent},
     {path: 'carrinho', component: CarrinhoComponent},
+    {path: 'cadastro', component: CadastroComponent},
 ]},
 
 ];
