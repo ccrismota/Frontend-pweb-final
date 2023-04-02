@@ -14,6 +14,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { AFitfoodComponent } from './components/a-fitfood/a-fitfood.component';
 import { MaisVendidosComponent } from './components/mais-vendidos/mais-vendidos.component';
 import { PedidosEspeciaisComponent } from './components/pedidos-especiais/pedidos-especiais.component';
+import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-produto.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PedidosEspeciaisComponent } from './components/pedidos-especiais/pedido
     LandingPageComponent,
     AFitfoodComponent,
     MaisVendidosComponent,
-    PedidosEspeciaisComponent
+    PedidosEspeciaisComponent,
+    DetalheProdutoComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
