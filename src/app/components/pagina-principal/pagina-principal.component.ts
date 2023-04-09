@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ProdutoService } from 'src/app/services/produto/produto.service';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
+
+
+
   constructor() { }
 
+
+
   ngOnInit(): void {
+
   }
 
 }

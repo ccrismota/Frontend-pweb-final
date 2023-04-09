@@ -16,6 +16,8 @@ import { MaisVendidosComponent } from './components/mais-vendidos/mais-vendidos.
 import { PedidosEspeciaisComponent } from './components/pedidos-especiais/pedidos-especiais.component';
 import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-produto.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { PaginaPesquisaComponent } from './components/pagina-pesquisa/pagina-pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MaisVendidosComponent,
     PedidosEspeciaisComponent,
     DetalheProdutoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PaginaPesquisaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

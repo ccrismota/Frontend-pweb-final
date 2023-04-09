@@ -1,0 +1,215 @@
+.card {
+  margin: 40px 120px 50px 110px;
+  height: 497px;
+  border: none;
+}
+
+ .card img {
+  object-fit: fill;
+}
+
+.card-img {
+  width: 530px;
+  height: 495px;
+}
+
+.card-body{
+  width: 500px;
+  padding: 5px;
+  margin: 0 0 0 210px;
+}
+
+.card-body p {
+  text-align: justify;
+}
+
+.titulo {
+  display: flex;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.subtitulo{
+  font-size: 20px;
+  color: #C4C4C4;
+}
+
+.subtitulo-2{
+  display: flex;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.subtitulo-ingrediente{
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.card-body .preco {
+  display: flex;
+  align-items: start;
+  font-size: 25px;
+  font-weight: 600;
+  float: left;
+}
+
+.card-body .peso {
+  margin-left: 100px;
+  color: #C4C4C4;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.botao{
+  width: 120px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 100px;
+  background-color: #000000;
+  border-radius: 7px;
+  border: 1px solid #000;
+  font-weight: 600;
+  color: #FDCE0C;
+  padding: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .card-img {
+    width: 480px;
+    height: 465px;
+  }
+
+  .card-body{
+    width: 500px;
+    padding: 5px;
+    margin: 0 0 0 180px;
+  }
+
+  .preco-preso-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container{
+    width: 85%;
+    margin: 50px  50px 0 100px;
+
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .card {
+    margin: 40px 70px 30px 5px;
+    height: 497px;
+    border: none;
+  }
+
+  .card-img {
+    width: 480px;
+    height: 465px;
+  }
+
+  .card-body{
+    width: 500px;
+    padding: 5px;
+    margin: 0 0 0 180px;
+  }
+
+  .container{
+    width: 100%;
+    margin: 0 50px 0 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    margin: 40px 20px 50px 20px;
+    height: 497px;
+    border: none;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-body{
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .card-body .preco {
+    display: flex;
+    align-items: start;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .card-body .peso {
+    margin-left: 50px;
+    margin-top: 10px;
+    color: #C4C4C4;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .preco-preso-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .botao{
+    width: 100px;
+    text-align: center;
+    margin: 5px 0 0 65px;
+    background-color: #000000;
+    border-radius: 7px;
+    font-weight: 600;
+    color: #FDCE0C;
+    padding: 7px;
+  }
+
+  .container{
+    margin-top: 350px;
+  }
+
+  .container{
+    margin-top: 370px;
+  }
+}
+
+@media screen and (max-width: 422px){
+  .botao{
+    width: 100px;
+    height: 40px;
+    margin: 5px 0 0 50px;
+  }
+
+  .card-body .peso {
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .card-body .preco {
+    font-size: 15px;
+  }
+
+  .container{
+    margin-top: 370px;
+  }
+
+}

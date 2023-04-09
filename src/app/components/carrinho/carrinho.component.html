@@ -1,49 +1,44 @@
 <main>
-    <div id="espaco-cesta">
-        <h3>CESTA</h3>
+    <div class="espaco-cesta">
+        <h5>Carrinho</h5>
         <table class="table">
-            <thead>
+            <thead  class="table-header mb-5">
                 <tr>
-                    <th>Item</th>
-                    <th>QTD</th>
-                    <th>Valor</th>
+                    <th>Produto</th>
+                    <th class="descricao">Descrição</th>
+                    <th>Preço Unitário</th>
+                    <th>Qtd</th>
+                    <th class="total">Total</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Produto 1</td>
-                    <td>1x</td>
-                    <td>R$: 99,99</td>
+            <tr>
+              <td><span class="espaco"></span></td>
+            </tr>
+            <tbody class="table-body" *ngFor="let item of produto">
+                <tr class="item">
+                    <td class="table-body-td"><img src="assets/img/marmita_1.png" alt="imagem">
+                    <td class="table-body-td-descricao"><p>Frango desfiado com risoto de abóbora</p></td>
+                    <td class="table-body-td-preco-unitario">{{item.preco}}</td>
+                    <td class="table-body-td-qtd"><i class="bi bi-dash-circle text-danger me-2" (click)="decrementar(item)"></i>{{quantidade}}<i class="bi bi-plus-circle text-success ms-2" (click)="incrementar(item)"></i></td>
+                    <td class="table-body-td-total">{{item.preco * quantidade}}</td>
+                    <td class="table-body-td-excluir"><i class="bi bi-x-circle" (click)="remover(item)"></i>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Produto 2</td>
-                    <td>2x</td>
-                    <td>R$: 144,40</td>
-                    
+                  <td><span class="espaco"></span></td>
                 </tr>
-                <tr>
-                    <td>Produto 3</td>
-                    <td>1x</td>
-                    <td>R$: 87,99</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>Total</td>
-                    <td></td>
-                    <td>R$: 332,38</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr></tr>
             </tbody>
         </table>
-
-        <div id="cesta-butoes">
-            <button type="button" class="btn btn-outline-secondary"title="Limpar os itens da cesta">LIMPAR CESTA</button>
-            <button type="button" class="btn btn-secondary" title="Finalizar compra" onclick="finalizar();">FINALIZAR</button>
+        <div class="valor-total" *ngFor="let item of produto">
+            <p class="total">Valor Total</p>
+            <p class="valor">R$ {{item.preco * quantidade}}</p>
+        </div>
+        <div class="carrinho-butoes" *ngFor="let item of produto">
+            <button type="button" class="button-card-limpar"title="Limpar os itens da cesta" (click)="remover(item)">LIMPAR CESTA</button>
+            <button type="button" class="button-card-finalizar" title="Finalizar compra">FINALIZAR</button>
         </div>
 
     </div>
-    
+
 </main>

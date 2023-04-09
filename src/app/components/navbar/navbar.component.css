@@ -68,6 +68,8 @@
   }
 
   .menu-mobile li{
+    z-index: 1;
+    background-color: whitesmoke;
     font-size: 12px;
     display: flex;
     width: 155px;

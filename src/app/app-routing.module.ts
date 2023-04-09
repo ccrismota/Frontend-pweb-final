@@ -11,6 +11,8 @@ import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-p
 import { PedidosEspeciaisComponent } from './components/pedidos-especiais/pedidos-especiais.component';
 import { RecuperarSenhaComponent } from './components/recuperar-senha/recuperar-senha.component';
 import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-produto.component';
+import { PaginaPesquisaComponent } from './components/pagina-pesquisa/pagina-pesquisa.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: PaginaPrincipalComponent ,
@@ -25,6 +27,8 @@ const routes: Routes = [
     {path: 'cadastrar', component: CadastroComponent},
     {path: 'recuperarsenha' ,component: RecuperarSenhaComponent},
     {path: 'detalhes/:id', component: DetalheProdutoComponent},
+    {path: 'pagina/pesquisa', component: PaginaPesquisaComponent},
+    {path: '**', component: NotFoundComponent}
 ]},
 
 ];

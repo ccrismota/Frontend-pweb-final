@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Produto } from 'src/app/models/produto';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  carrinho: Produto[] = [];
+
+
+  @Input('totalQuantityCart') produto!: 0;
+  @Output('addToCart') addToCart = new EventEmitter<Produto>();
+
+
+    constructor() { }
+
+
+    produtosNoCarrinho(produto: Produto){
+      return this.carrinho.includes(produto);
+    }
+
+
 
   ngOnInit(): void {
+
   }
 
 }

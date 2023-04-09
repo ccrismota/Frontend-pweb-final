@@ -1,0 +1,161 @@
+
+/* img {
+  object-fit: cover;
+} */
+
+td {
+  border: none;
+}
+
+.table-body .item {
+  border: 1px solid #000000;
+}
+
+.espaco-cesta{
+    margin: 20px;
+}
+
+.table-header {
+   border: none;
+}
+
+
+.espaco{
+  height: 27px;
+}
+
+.table-body img{
+  width: 100px;
+  height: 70px;
+}
+
+
+.table-body-td{
+  display: flex;
+  flex-direction: row;
+}
+
+.table-body-td p{
+  margin: 23px 0 0 10px;
+}
+
+.table-body-td-descricao,
+.table-body-td-preco-unitario,
+.table-body-td-qtd,
+.table-body-td-total,
+.table-body-td-excluir{
+  padding: 35px 0 0 10px;
+  border: none;
+}
+
+
+.table-body-td-excluir{
+  cursor: pointer;
+  padding-top: 27px;
+  color: red;
+  font-size: 25px;
+}
+
+.table-body {
+  border: none ;
+}
+
+.bi-plus-circle,
+.bi-dash-circle{
+  cursor: pointer;
+}
+
+.valor-total {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 60px 0 0 0;
+}
+
+.valor-total .total {
+  font-size: 18px;
+  margin: 0 5px 0 0;
+  font-weight: 600;
+}
+
+.valor-total .valor {
+  font-size: 25px;
+  margin: 0 5px 0 0;
+  font-weight: 600;
+  color: #279E36;
+}
+
+
+.carrinho-butoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 0 0 70px 0;
+}
+
+.button-card-limpar {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin: 20px 25px 0 0;
+  border-radius: 7px;
+  color: #000000;
+  width: 300px;
+  height: 40px;
+}
+
+.button-card-limpar:hover {
+  background-color: red;
+  color: #000000;
+  font-weight: 900;
+}
+
+.button-card-finalizar {
+  background-color: #000000;
+  margin: 20px 0 0 25px;
+  border-radius: 7px;
+  color: #FDCE0C;
+  width: 300px;
+  height: 40px;
+}
+
+.button-card-finalizar:hover {
+  background-color: #FDCE0C;
+  color: #000000;
+  font-weight: 900;
+}
+
+@media (max-width: 808px) {
+
+  .table-body-td p{
+    margin: 10px 0 0 10px;
+  }
+
+
+  .table-body-td-excluir{
+    position: absolute;
+    font-size: 18px;
+    padding: 33px 0 0 0;
+    margin: 0 0 0 70px;
+  }
+
+  .table-body-td-preco-unitario{
+    position: absolute;
+    margin: 0 0 0 -100px ;
+  }
+
+
+  .table-body-td-qtd{
+    position: absolute;
+    margin: 0 0 0 -10px ;
+  }
+
+  .table-body p, .table-body-td-total{
+    display: none;
+  }
+
+  .total,
+  .descricao{
+    display: none;
+  }
+
+}
