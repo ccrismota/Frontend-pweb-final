@@ -3,27 +3,45 @@
     <div class="entrar row col-sm-12 col-md-4">
       <h4 class="text-center">Login</h4>
       <br />
-      <form>
+      <form [formGroup]="formularioLogin">
         <label for="email">E-mail</label>
         <input
+          id="email"
+          formControlName="email"
           type="email"
           class="form-control email"
           name="Email"
           placeholder="Digite o seu email"
-        /><br />
+        />
+        <small *ngIf="formularioLogin.get('email')?.errors?.['required'] && formularioLogin.get('email')?.touched" class="text-danger">
+          Email é obrigatório
+        </small>
+        <small *ngIf="formularioLogin.get('email')?.errors?.['email'] && formularioLogin.get('email')?.touched" class="text-danger">
+          Email inválido
+        </small>
+        <br />
 
         <label>Senha</label>
         <input
+          id="senha"
+          formControlName="senha"
           class="senha"
           type="password"
           class="form-control"
           placeholder="Digite sua senha"
         />
+        <small *ngIf="formularioLogin.get('senha')?.errors?.['required'] && formularioLogin.get('senha')?.touched" class="text-danger">
+          Senha é obrigatória
+        </small>
+        <small *ngIf="formularioLogin.get('senha')?.errors?.['minlength'] && formularioLogin.get('senha')?.touched" class="text-danger">
+          A senha deve ter no mínimo 6 caracteres
+        </small>
 
-          <button
+        <button
             id="btn-entrar"
             type="button"
             class="w-100"
+            [disabled]="!formularioLogin.invalid"
            >Entrar</button
           ><br>
           <a href="recuperarsenha"><span class="btn w-100 recuperar-senha">
