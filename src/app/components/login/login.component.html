@@ -1,26 +1,45 @@
 <main>
-    <h3 id="titulo-menu">
-        Login
-        <hr>
-    </h3>
-    <div id="espaco-login">
-        <div id="entrar">
-            <h4>Entrar</h4><br>
-            <form>
-                <label>E-mail</label>
-                <input id="email" type="email" class="form-control" name="Email" placeholder="Digite o seu email"><br>
-                <label>Senha</label>
-                <input id="senha" type="password" class="form-control" placeholder="Digite sua senha">
-                <p>Esqueci minha senha, <a href="recuperarsenha" >clique aqui  </a>  </p>
-                <label></label><br>
-                <button type="button" class="btn btn-secondary" >Entrar</button><br>
-            </form>
-        </div>
-        <div id="cadastrar">
-            <form>
-                <h4>Ainda não tenho cadastro</h4><br> 
-                <a href="cadastrar"><button type="button" class="btn btn-secondary">Clique aqui para se cadastrar</button></a><br>
-            </form>
-        </div>
+  <div class="espaco-login d-flex">
+    <div class="entrar row col-sm-12 col-md-4">
+      <h4 class="text-center">Login</h4>
+      <br />
+      <form>
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          class="form-control email"
+          name="Email"
+          placeholder="Digite o seu email"
+        /><br />
+
+        <label>Senha</label>
+        <input
+          class="senha"
+          type="password"
+          class="form-control"
+          placeholder="Digite sua senha"
+        />
+
+          <button
+            id="btn-entrar"
+            type="button"
+            class="w-100"
+           >Entrar</button
+          ><br>
+          <a href="recuperarsenha"><span class="btn w-100 recuperar-senha">
+            Esqueci minha senha
+          </span></a>
+      </form>
+      <a href="cadastrar">
+        <button type="button" class="btn btn-light mb-3 w-100">
+          Ainda não tenho cadastro
+        </button>
+      </a>
     </div>
+    <div class="row imagem">
+      <img src="assets/img/marmita.png" alt="marmita">
+    </div>
+  </div>
 </main>
+
+

@@ -1,0 +1,49 @@
+#espaco-esqueci {
+  background-color: #FDC04A;
+  border: #FDC04A 1px solid;
+  border-radius: 25px;
+  margin: 5% 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+#esqueci-senha {
+  width: 50%;
+  padding: 20px;
+  background-color: #FDC04A;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #espaco-esqueci {
+    margin: 5% 5%;
+  }
+  #esqueci-senha {
+    width: 90%;
+  }
+}
+
+

@@ -1,26 +1,30 @@
-<div>
-  <h3 id="titulo-menu">
-      Cadastro
-  </h3>
-  <div id="espaco-cadastro">
-      <div id="cadastro-cadastrar">
-          <h4>Realize o seu cadastro</h4><br/>
-          <form>
-              <label>Nome:</label>
-              <input id="nome" type="text" class="form-control" placeholder="Digite seu nome"><br>
-              <label>E-mail:</label>
-              <input id="email" type="email" class="form-control" name="Email" placeholder="Digite o seu email"><br>
-              <label>CPF</label>
-              <input id="cpf" type="text" class="form-control" placeholder="Digite seu CPF"><br>
-              <label>Senha:</label>
-              <input id="senha1" type="password" class="form-control" placeholder="Crie uma senha"><br>
-              <label>Confirmação de senha</label>
-              <input id="senha2" type="password" class="form-control" placeholder="Confirme sua senha"><br>
-              <label></label>
-              <a href="login"><button type="button" class="btn btn-secondary">Confirmar</button></a>
-        </form>
-      </div>
+
+<main>
+  <div class="espaco-login d-flex">
+    <div class="entrar row col-sm-12 col-md-4">
+      <h4 class="text-center">Cadastro</h4>
+      <form >
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" class="form-control" placeholder="Digite seu nome"><br>
+
+
+        <label for="email">E-mail</label>
+        <input type="email" class="form-control email" name="email" placeholder="Digite o seu email"><br />
+
+
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control senha" placeholder="Digite sua senha">
+
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="text" class="form-control" placeholder="Digite seu CPF"><br>
+
+
+        <button id="btn-entrar" type="submit" class="w-100">Cadastrar</button>
+      </form>
+    </div>
+    <div class="row imagem">
+      <img src="assets/img/marmita.png" alt="marmita">
+    </div>
   </div>
-</div>
-
-
+</main>

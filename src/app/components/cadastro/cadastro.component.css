@@ -1,0 +1,108 @@
+main {
+  justify-content: center;
+  min-height: 13vh;
+  display: flex;
+}
+
+.espaco-login {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 25px 15px 25px;
+  padding: 5px;  width: 100%;
+}
+
+.entrar label{
+  margin: 0 0 0 2px;
+}
+
+
+
+/*caixa entrar*/
+.entrar {
+  background-color: #FDC04A;
+  border-radius: 5px;
+  padding: 10px 0 0 0;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form a {
+  display: block;
+  margin-top: 20px;
+}
+
+form button {
+  background-color: #000000;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #FDC04A;
+}
+
+form button:hover {
+  background-color: #3d3d38;
+  color: #FDC04A;
+}
+
+
+
+.cadastrar {
+  padding: 20px;
+  text-align: center;
+}
+
+.cadastrar h4 {
+  margin-bottom: 10px;
+}
+
+.imagem img {
+  object-fit: cover;
+  position: absolute;
+  float: right;
+  right: 0;
+  top: 130px;
+  width: 598px;
+  height: 502px;
+  border-radius: 0px 220px 0px 220px;
+}
+
+.recuperar-senha{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.recuperar-senha:hover{
+  background-color: #3d3d38;
+  color: #FDC04A;
+}
+
+@media screen and (max-width: 992px) {
+  .imagem img {
+    margin: -20px 0 0 0;
+    top: 130px;
+    width: 498px;
+    height: 534px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imagem img {
+    display: none;
+  }
+}
+
+
