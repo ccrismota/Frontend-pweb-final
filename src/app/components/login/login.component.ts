@@ -12,6 +12,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
+
+  onSubmit(): void {
+    console.log(this.formularioLogin.value);
+    alert('Bem vindo!');
+  }
+
+
   ngOnInit(): void {
 
     this.formularioLogin = this.fb.group({

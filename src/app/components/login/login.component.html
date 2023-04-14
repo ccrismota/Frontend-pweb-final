@@ -41,8 +41,8 @@
             id="btn-entrar"
             type="button"
             class="w-100"
-            [disabled]="!formularioLogin.invalid"
-           >Entrar</button
+            [disabled]="!formularioLogin.valid"
+            (click)="onSubmit()">Entrar</button
           ><br>
           <a href="recuperarsenha"><span class="btn w-100 recuperar-senha">
             Esqueci minha senha

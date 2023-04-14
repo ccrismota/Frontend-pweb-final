@@ -4,17 +4,41 @@ main {
   display: flex;
 }
 
-.espaco-login {
+.espaco-cadastro {
   display: flex;
   flex-direction: column;
   margin: 15px 25px 15px 25px;
   padding: 5px;  width: 100%;
 }
 
+.block{
+  margin: 0 0 20px 0;
+}
+
 .entrar label{
   margin: 0 0 0 2px;
 }
 
+.alert-text-cpf {
+  position: absolute;
+  margin: -30px 0 0 0;
+}
+
+.alert-text-senha {
+  position: absolute;
+  margin: -10px 0 0 0;
+}
+
+.alert-text-email {
+  position: absolute;
+  margin: -9px 0 0 0;
+}
+
+
+.alert-text-name {
+  position: absolute;
+  margin: -9px 0 0 0;
+}
 
 
 /*caixa entrar*/
@@ -23,15 +47,18 @@ main {
   border-radius: 5px;
   padding: 10px 0 0 0;
 }
+
 form label {
   display: block;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 form input {
+  text-indent: 5px;
   margin-bottom: 10px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
+  margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -43,7 +70,7 @@ form a {
 
 form button {
   background-color: #000000;
-  margin-top: 20px;
+  margin: 0 0 25px 0;
   padding: 10px;
   border-radius: 5px;
   color: #FDC04A;
@@ -72,7 +99,7 @@ form button:hover {
   right: 0;
   top: 130px;
   width: 598px;
-  height: 502px;
+  height: 485px;
   border-radius: 0px 220px 0px 220px;
 }
 

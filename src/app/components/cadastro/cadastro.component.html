@@ -1,30 +1,107 @@
-
 <main>
-  <div class="espaco-login d-flex">
+  <div class="espaco-cadastro d-flex">
     <div class="entrar row col-sm-12 col-md-4">
       <h4 class="text-center">Cadastro</h4>
-      <form >
-        <label for="nome">Nome:</label>
-        <input id="nome" type="text" class="form-control" placeholder="Digite seu nome"><br>
-
-
-        <label for="email">E-mail</label>
-        <input type="email" class="form-control email" name="email" placeholder="Digite o seu email"><br />
-
-
-        <label for="senha">Senha</label>
-        <input type="password" class="form-control senha" placeholder="Digite sua senha">
-
-
-        <label for="cpf">CPF</label>
-        <input id="cpf" type="text" class="form-control" placeholder="Digite seu CPF"><br>
-
-
-        <button id="btn-entrar" type="submit" class="w-100">Cadastrar</button>
+      <form [formGroup]="formularioCadastro">
+        <div class="block">
+          <label for="nome">Nome:</label>
+        <input
+          id="nome"
+          formControlName="nome"
+          type="text"
+          class="form-control"
+          placeholder="Digite seu nome"
+        />
+        <small
+          *ngIf="formularioCadastro.get('nome')?.errors?.['required'] && formularioCadastro.get('nome')?.touched"
+          class="text-danger alert-text-name"
+        >
+          O nome é obrigatório</small
+        >
+        <small
+          *ngIf="formularioCadastro.get('nome')?.errors?.['minlength'] && formularioCadastro.get('nome')?.touched"
+          class="text-danger alert-text-name"
+          >O nome deve ter no mínimo 10 caracteres</small
+        >
+        </div>
+        <div class="block">
+          <label for="email">E-mail</label>
+        <input
+          id="email"
+          formControlName="email"
+          type="email"
+          class="form-control email"
+          name="email"
+          placeholder="Digite o seu email"
+        />
+        <small
+          *ngIf="formularioCadastro.get('email')?.errors?.['required'] && formularioCadastro.get('email')?.touched"
+          class="text-danger alert-text-email"
+          >Email é obrigatório</small
+        >
+        <small
+          *ngIf="formularioCadastro.get('email')?.errors?.['email'] && formularioCadastro.get('email')?.touched"
+          class="text-danger alert-text-email"
+          >Email inválido</small
+        >
+        </div>
+        <div class="block">
+          <label for="senha">Senha</label>
+        <input
+          id="senha"
+          formControlName="senha"
+          type="password"
+          class="form-control senha"
+          placeholder="Digite sua senha"
+        />
+        <small
+          *ngIf="formularioCadastro.get('senha')?.errors?.['required'] && formularioCadastro.get('senha')?.touched"
+          class="text-danger alert-text-senha"
+        >
+          Senha é obrigatória
+        </small>
+        <small
+          *ngIf="formularioCadastro.get('senha')?.errors?.['minlength'] && formularioCadastro.get('senha')?.touched"
+          class="text-danger alert-text-senha"
+        >
+          A senha deve ter no mínimo 6 caracteres
+        </small>
+        </div>
+        <div>
+          <label for="cpf">CPF</label>
+        <input
+          id="cpf"
+          formControlName="cpf"
+          type="text"
+          class="form-control"
+          placeholder="CPF ex: 123.456.789-00"
+        /><br />
+        <small
+          *ngIf="formularioCadastro.get('cpf')?.errors?.['required'] && formularioCadastro.get('cpf')?.touched"
+          class="text-danger alert-text-cpf"
+        >
+          O CPF é obrigatório
+        </small>
+        <small
+          *ngIf="formularioCadastro.get('cpf')?.errors?.['minlength'] && formularioCadastro.get('cpf')?.touched"
+          class="text-danger alert-text-cpf"
+        >
+          A CPF deve ter no mínimo 11 caracteres
+        </small>
+        </div>
+        <button
+          id="btn-entrar"
+          type="submit"
+          class="w-100"
+          [disabled]="!formularioCadastro.valid"
+          (click)="onSubmit()"
+        >
+          Cadastrar
+        </button>
       </form>
     </div>
     <div class="row imagem">
-      <img src="assets/img/marmita.png" alt="marmita">
+      <img src="assets/img/marmita.png" alt="marmita" />
     </div>
   </div>
 </main>
