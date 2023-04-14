@@ -19,6 +19,7 @@ export class CadastroComponent implements OnInit {
   onSubmit(): void {
     console.log(this.formularioCadastro.value);
     alert('Cadastro realizado com sucesso!');
+    this.formularioCadastro.reset();
   }
 
   ngOnInit(): void {

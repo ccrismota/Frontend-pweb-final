@@ -1,8 +1,9 @@
 #espaco-esqueci {
-  background-color: #FDC04A;
+  /* background-color: #FDC04A; */
   border: #FDC04A 1px solid;
   border-radius: 25px;
-  margin: 5% 15%;
+  margin: 5% 30%;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,12 +30,19 @@ form input {
 }
 
 form button {
-
-  color: #fff;
+  background-color: #000000;
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  #espaco-esqueci {
+    margin: 5% 20%;
+  }
+  #esqueci-senha {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
