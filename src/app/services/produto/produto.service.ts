@@ -29,8 +29,15 @@ export class ProdutoService {
     return this.produtos;
   }
 
+
   addProduto(produto: Produto){
     this.produtos.push(produto);
+  }
+
+
+  incrementarProdutoId(id: number){
+    let produto = this.getById(id);
+    produto.qtd++;
   }
 
   constructor() { }
@@ -44,22 +51,22 @@ export class ProdutoService {
       peso: 200,
       qtd: 50
     },
-    // {
-    //   id: 2,
-    //   image: 'assets/img/marmita_2.png',
-    //   descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-    //   preco: 20.95,
-    //   peso: 250,
-    //   qtd: 74
-    // },
-    // {
-    //   id: 3,
-    //   image: 'assets/img/marmita_3.png',
-    //   descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-    //   preco: 15.87,
-    //   peso: 250,
-    //   qtd: 63
-    // },
+    {
+      id: 2,
+      image: 'assets/img/marmita_2.png',
+      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
+      preco: 20.95,
+      peso: 250,
+      qtd: 74
+    },
+    {
+      id: 3,
+      image: 'assets/img/marmita_3.png',
+      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
+      preco: 15.87,
+      peso: 250,
+      qtd: 63
+    },
   ];
 
 }

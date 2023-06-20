@@ -18,6 +18,9 @@ import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-pr
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaginaPesquisaComponent } from './components/pagina-pesquisa/pagina-pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +44,11 @@ import { PaginaPesquisaComponent } from './components/pagina-pesquisa/pagina-pes
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([])
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -14,6 +14,9 @@ import { DetalheProdutoComponent } from './components/detalhe-produto/detalhe-pr
 import { PaginaPesquisaComponent } from './components/pagina-pesquisa/pagina-pesquisa.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+
+
+
 const routes: Routes = [
   { path: '', component: PaginaPrincipalComponent ,
 

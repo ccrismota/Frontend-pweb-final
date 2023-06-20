@@ -1,0 +1,11 @@
+main {
+  background-color: #F2F2F2;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+p{
+  text-align: justify;
+}

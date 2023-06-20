@@ -30,12 +30,12 @@
               </tr>
           </tbody>
       </table>
-      <div class="valor-total" *ngFor="let item of produto">
+      <div class="valor-total">
           <p class="total">Valor Total</p>
-          <p class="valor">R$ {{item.preco * quantidade}}</p>
+          <p class="valor">R$ {{somarProdutos()}} </p>
       </div>
-      <div class="carrinho-butoes" *ngFor="let item of produto">
-          <button type="button" class="button-card-limpar"title="Limpar os itens da cesta" (click)="remover(item)">LIMPAR CESTA</button>
+      <div class="carrinho-butoes">
+          <button type="button" class="button-card-limpar"title="Limpar os itens da cesta">LIMPAR CESTA</button>
           <button type="button" class="button-card-finalizar" title="Finalizar compra">FINALIZAR</button>
       </div>
 

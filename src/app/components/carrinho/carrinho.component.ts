@@ -18,10 +18,14 @@ export class CarrinhoComponent implements OnInit {
 
     produto: Produto[] = this.produtoService.getProdutos();
 
+
     incrementar(produto: Produto): void {
       this.quantidade++;
       this.produtoService.incrementar(produto);
     }
+
+
+
 
     decrementar(produto: Produto): void {
       if (this.quantidade > 1)
@@ -32,6 +36,14 @@ export class CarrinhoComponent implements OnInit {
 
     remover(produto: Produto): void {
       this.produtoService.remover(produto);
+    }
+
+    somarProdutos(): number {
+      let soma = 0.00;
+      this.produto.forEach(produto => {
+        soma += produto.preco * this.quantidade;
+      });
+      return Number(soma.toFixed(2));
     }
 
 
