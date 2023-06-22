@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -12,14 +13,21 @@ export class CadastroComponent implements OnInit {
   formularioCadastro!: FormGroup;
 
   constructor(
+    private authService: AuthService,
     private fb: FormBuilder
   ) { }
 
-
   onSubmit(): void {
-    console.log(this.formularioCadastro.value);
-    alert('Cadastro realizado com sucesso!');
-    this.formularioCadastro.reset();
+    this.authService.cadastrar(this.formularioCadastro.value).subscribe(
+      (data) => {
+        console.log(data);
+        alert('Cadastro realizado com sucesso!');
+      },
+      (error) => {
+        console.log(error);
+        alert('Erro ao cadastrar!');
+      }
+    );
   }
 
   ngOnInit(): void {

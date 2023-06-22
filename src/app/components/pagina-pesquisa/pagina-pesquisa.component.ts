@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Produto } from 'src/app/models/produto';
+import { ProdutoService } from 'src/app/services/produto/produto.service';
 
 @Component({
   selector: 'app-pagina-pesquisa',
@@ -8,56 +10,38 @@ import { Produto } from 'src/app/models/produto';
 })
 export class PaginaPesquisaComponent implements OnInit {
 
-  constructor() { }
+  @Input() procurarProduto!: String;
 
-  // @Input() produtos: Produto[] = [];
+  constructor(
+    private route: ActivatedRoute,
+    private produtoService: ProdutoService
 
+  ) { }
+
+  procurar: string = '';
   filto: Produto[] = [];
+  produtos: Produto[] = [];
 
-  produtos: Produto[] = [
-    {
-      id: 1,
-      image: 'assets/img/marmita_1.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 21.95,
-      peso: 200,
-      qtd: 50
-    },
-    {
-      id: 2,
-      image: 'assets/img/marmita_2.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 20.95,
-      peso: 250,
-      qtd: 74
-    },
-    {
-      id: 3,
-      image: 'assets/img/marmita_3.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 15.87,
-      peso: 250,
-      qtd: 63
-    },
-  ];
-
-  search(e: Event): void {
-
-    const target = e.target as HTMLInputElement;
-    const value = target.value;
-
-    this.filto = this.produtos.filter((produto: Produto) => {
-
-      return produto.descricao.toLowerCase().includes(value.toLowerCase());
-
-    }
-    );
-
-    console.log(this.filto);
+  carregarProdutos(): void {
+    this.produtoService.getProdutos().subscribe((produtos: Produto[]) => {
+      this.produtos = produtos;
+      this.filto = produtos;
+    });
   }
+
+  procurarProdutos(): void {
+    if (this.procurar && this.procurar.trim() !== '') {
+      this.produtoService.procurarProdutos(this.procurar).subscribe((produtos: Produto[]) => {
+        this.produtos = produtos;
+      });
+    } else {
+      this.carregarProdutos();
+    }
+  }
+
 
   ngOnInit(): void {
+    this.carregarProdutos();
 
   }
-
 }

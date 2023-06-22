@@ -29,7 +29,7 @@ const routes: Routes = [
     {path: 'carrinho', component: CarrinhoComponent},
     {path: 'cadastrar', component: CadastroComponent},
     {path: 'recuperarsenha' ,component: RecuperarSenhaComponent},
-    {path: 'detalhes/:id', component: DetalheProdutoComponent},
+    {path: 'produto/:id', component: DetalheProdutoComponent},
     {path: 'pagina/pesquisa', component: PaginaPesquisaComponent},
     {path: '**', component: NotFoundComponent}
 ]},

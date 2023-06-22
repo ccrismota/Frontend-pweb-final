@@ -15,14 +15,14 @@
           <tr>
             <td><span class="espaco"></span></td>
           </tr>
-          <tbody class="table-body" *ngFor="let item of produto">
+          <tbody class="table-body">
               <tr class="item">
                   <td class="table-body-td"><img src="assets/img/marmita_1.png" alt="imagem">
                   <td class="table-body-td-descricao"><p>Frango desfiado com risoto de abóbora</p></td>
-                  <td class="table-body-td-preco-unitario">{{item.preco}}</td>
-                  <td class="table-body-td-qtd"><i class="bi bi-dash-circle text-danger me-2" (click)="decrementar(item)"></i>{{quantidade}}<i class="bi bi-plus-circle text-success ms-2" (click)="incrementar(item)"></i></td>
-                  <td class="table-body-td-total">{{item.preco * quantidade}}</td>
-                  <td class="table-body-td-excluir"><i class="bi bi-x-circle" (click)="remover(item)"></i>
+                  <td class="table-body-td-preco-unitario"></td>
+                  <td class="table-body-td-qtd"><i class="bi bi-dash-circle text-danger me-2"></i><i class="bi bi-plus-circle text-success ms-2"></i></td>
+                  <td class="table-body-td-total"></td>
+                  <td class="table-body-td-excluir"><i class="bi bi-x-circle" ></i>
                   </td>
               </tr>
               <tr>
@@ -32,7 +32,7 @@
       </table>
       <div class="valor-total">
           <p class="total">Valor Total</p>
-          <p class="valor">R$ {{somarProdutos()}} </p>
+          <p class="valor">R$ </p>
       </div>
       <div class="carrinho-butoes">
           <button type="button" class="button-card-limpar"title="Limpar os itens da cesta">LIMPAR CESTA</button>

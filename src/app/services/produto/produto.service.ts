@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Produto } from 'src/app/models/produto';
 
 @Injectable({
@@ -7,66 +9,26 @@ import { Produto } from 'src/app/models/produto';
 export class ProdutoService {
 
 
-  remover(produto: Produto) {
-    this.produtos.splice(this.produtos.indexOf(produto), 1);
+  constructor(
+    private http: HttpClient
+  ) { }
+
+
+  private baseUrl = 'http://localhost:8090';
+
+
+  getProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.baseUrl}/api/produtos`);
   }
 
+  procurarProdutos(procurar: string): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.baseUrl}/api/produtos?descricao_like=${procurar}`);
 
-  incrementar(produto: Produto) {
-    produto.qtd++;
   }
 
-  decrementar(produto: Produto) {
-    produto.qtd--;
+  getProduto(id: string) {
+    return this.http.get<Produto>(`${this.baseUrl}/api/produto/${id}`);
   }
-
-  getById(id: any): any{
-    return this.produtos.find(p => p.id === id);
-  }
-
-
-  getProdutos(): Produto[] {
-    return this.produtos;
-  }
-
-
-  addProduto(produto: Produto){
-    this.produtos.push(produto);
-  }
-
-
-  incrementarProdutoId(id: number){
-    let produto = this.getById(id);
-    produto.qtd++;
-  }
-
-  constructor() { }
-
-  produtos: Produto[] = [
-    {
-      id: 1,
-      image: 'assets/img/marmita_1.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 21.95,
-      peso: 200,
-      qtd: 50
-    },
-    {
-      id: 2,
-      image: 'assets/img/marmita_2.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 20.95,
-      peso: 250,
-      qtd: 74
-    },
-    {
-      id: 3,
-      image: 'assets/img/marmita_3.png',
-      descricao: 'Frango desfiado com risoto de abóbora, arroz integral, salada de alface americana e salpicão. Inclui sobremesa a gosto do cliente.',
-      preco: 15.87,
-      peso: 250,
-      qtd: 63
-    },
-  ];
-
 }
+
+

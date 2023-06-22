@@ -1,26 +1,26 @@
 <div class="container-fluid">
   <div class="card mb-5">
-    <div class="row g-0">
+    <div class="row g-0" *ngIf="produto">
       <div class="col-md-4 col-sm-12">
-        <img src="assets/img/marmita_1.png" class="card-img" alt="marmita">
+        <img src="{{produto.urlImage}}" class="card-img" alt="marmita">
       </div>
       <div class="col-md-8 col-sm-12">
         <div class="card-body text-justify">
-          <span class="card-title titulo">Abóbora com carne moída</span>
+          <span class="card-title titulo">{{produto.tituloGeral}}</span>
           <span class="card-title subtitulo">Descrição</span>
-          <p class="card-text mt-2 mb-2">Uma carne moída bem suculenta e saborosa, acompanhada de um purê de batatas BEM cremoso, BEM saboroso e MUITO nutritivo. Essa é aquela combinação simples e equilibrada que não pode faltar no seu dia a dia!.</p>
+          <p class="card-text mt-2 mb-2">{{produto.descricao}}</p>
           <span class="card-title subtitulo">Ingredinentes</span>
           <p>
-            <span class="subtitulo-2">Carne moída com cenoura e vagem:</span>
-            carne bovina, cenoura, passata de tomate, cebola orgânica, vagem, azeite extra virgem, alho, sal, pimenta do reino.
+            <span class="subtitulo-2">{{produto.ingredientes}}</span>
+            {{produto.descricaoIngredientes}}
           </p>
           <p>
-            <span class="subtitulo-2">Abobora:</span>
-            Abóbora temperada com passata de tomate, cebola orgânica, vagem, azeite extra virgem, alho, sal, pimenta do reino.
+            <span class="subtitulo-2">{{produto.tituloIngrediente2}}</span>
+            {{produto.descricaoIngrediente2}}
           </p>
           <div class="preco-preso-btn">
-            <span class="preco">R$ 15,90</span>
-            <span class="peso">250g</span>
+            <span class="preco">{{produto.preco | currency: 'BRL'}}</span>
+            <span class="peso">{{produto.peso}}g</span>
             <a href="carrinho"><button class="botao">Comprar</button></a>
           </div>
         </div>

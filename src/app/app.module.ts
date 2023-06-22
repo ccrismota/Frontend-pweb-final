@@ -46,7 +46,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot([])
+    RouterModule
   ],
   exports: [RouterModule],
   providers: [],

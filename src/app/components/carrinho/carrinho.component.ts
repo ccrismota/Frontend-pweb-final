@@ -16,35 +16,35 @@ export class CarrinhoComponent implements OnInit {
     private produtoService: ProdutoService,
     ) { }
 
-    produto: Produto[] = this.produtoService.getProdutos();
+    // produto: Produto[] = this.produtoService.getProdutos();
 
 
-    incrementar(produto: Produto): void {
-      this.quantidade++;
-      this.produtoService.incrementar(produto);
-    }
+    // incrementar(produto: Produto): void {
+    //   this.quantidade++;
+    //   this.produtoService.incrementar(produto);
+    // }
 
 
 
 
-    decrementar(produto: Produto): void {
-      if (this.quantidade > 1)
-      this.quantidade--;
-      this.produtoService.decrementar(produto);
-    }
+    // decrementar(produto: Produto): void {
+    //   if (this.quantidade > 1)
+    //   this.quantidade--;
+    //   this.produtoService.decrementar(produto);
+    // }
 
 
-    remover(produto: Produto): void {
-      this.produtoService.remover(produto);
-    }
+    // remover(produto: Produto): void {
+    //   this.produtoService.remover(produto);
+    // }
 
-    somarProdutos(): number {
-      let soma = 0.00;
-      this.produto.forEach(produto => {
-        soma += produto.preco * this.quantidade;
-      });
-      return Number(soma.toFixed(2));
-    }
+    // somarProdutos(): number {
+    //   let soma = 0.00;
+    //   this.produto.forEach(produto => {
+    //     soma += produto.preco * this.quantidade;
+    //   });
+    //   return Number(soma.toFixed(2));
+    // }
 
 
 

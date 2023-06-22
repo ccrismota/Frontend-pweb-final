@@ -1,8 +1,15 @@
 export interface Produto {
     id: number;
-    image: string;
+    urlImage: string;
+    tituloGeral: string;
     descricao: string;
+    ingredientes: number;
+    descricaoIngredientes: string;
+    tituloIngrediente2: string;
+    descricaoIngrediente2: string;
     preco: number;
     peso: number;
-    qtd: number;
+    quantidade: number;
 }
+
+
